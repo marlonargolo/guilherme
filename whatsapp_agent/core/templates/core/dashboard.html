@@ -1,0 +1,59 @@
+{% extends "core/base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                Seu Perfil
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-3">
+                    {% if user.perfil.foto %}
+                        <img src="{{ user.perfil.foto.url }}" class="rounded-circle" width="150" height="150">
+                    {% else %}
+                        <div class="bg-secondary rounded-circle d-inline-block" style="width: 150px; height: 150px;"></div>
+                    {% endif %}
+                </div>
+                <h5 class="card-title">{{ user.get_full_name }}</h5>
+                <p class="card-text">
+                    <strong>Tipo:</strong> {{ user.perfil.get_tipo_display }}<br>
+                    <strong>Telefone:</strong> {{ user.perfil.telefone }}
+                </p>
+                <a href="#" class="btn btn-primary">Editar Perfil</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                Últimos Serviços
+            </div>
+            <div class="card-body">
+                {% if servicos %}
+                    <div class="list-group">
+                        {% for servico in servicos %}
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">{{ servico.especialidade }}</h5>
+                                    <small class="text-muted">{{ servico.criado_em|timesince }} atrás</small>
+                                </div>
+                                <p class="mb-1">{{ servico.descricao|truncatechars:100 }}</p>
+                                <small class="text-muted">Status: {{ servico.get_status_display }}</small>
+                                {% if servico.link_pagamento %}
+                                    <a href="{{ servico.link_pagamento }}" target="_blank" class="btn btn-sm btn-success">Pagar</a>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p>Nenhum serviço recente.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
