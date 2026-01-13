@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SocialFlow 2035 - Futuristic Design System */
+
+@layer base {
+  /* Light Mode (Default) */
+  :root {
+    /* Core Colors - Light Theme */
+    --background: 0 0% 100%;
+    --foreground: 224 71% 10%;
+
+    /* Card with subtle shadow */
+    --card: 0 0% 99%;
+    --card-foreground: 224 71% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 10%;
+
+    /* Purple Primary (from logo) */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 83% 68%;
+
+    /* Light Secondary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 71% 10%;
+
+    /* Muted tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Pink Accent (from logo) */
+    --accent: 330 81% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 330 81% 70%;
+
+    /* Destructive Red */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.875rem;
+
+    /* Gradients - Light */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 96%));
+    --gradient-glow: radial-gradient(circle, hsl(var(--primary) / 0.08), transparent 70%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+
+    /* Shadows - Light */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 4px 24px -4px hsl(220 13% 10% / 0.08);
+    --shadow-accent: 0 0 30px hsl(var(--accent) / 0.2);
+
+    /* Social Platform Colors */
+    --social-instagram: 330 100% 55%;
+    --social-tiktok: 0 0% 5%;
+    --social-facebook: 214 89% 52%;
+    --social-linkedin: 200 98% 39%;
+    --social-whatsapp: 142 70% 49%;
+    --social-telegram: 200 76% 53%;
+    --social-kwai: 14 100% 57%;
+
+    /* Animations */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar - Light */
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 224 71% 10%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 224 71% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 262 83% 58%;
+  }
+
+  /* Dark Mode */
+  .dark {
+    /* Core Colors - Dark Futuristic Theme */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    /* Card with glassmorphism effect */
+    --card: 222 47% 7%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 224 71% 6%;
+    --popover-foreground: 213 31% 91%;
+
+    /* Purple Primary (from logo) */
+    --primary: 262 83% 58%;
+    --primary-foreground: 224 71% 4%;
+    --primary-glow: 262 83% 68%;
+
+    /* Dark Secondary */
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 213 31% 91%;
+
+    /* Muted tones */
+    --muted: 223 47% 15%;
+    --muted-foreground: 215 25% 65%;
+
+    /* Pink Accent (from logo) */
+    --accent: 330 81% 60%;
+    --accent-foreground: 224 71% 4%;
+    --accent-glow: 330 81% 70%;
+
+    /* Destructive Red */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 213 31% 91%;
+
+    /* Borders and inputs */
+    --border: 222 47% 20%;
+    --input: 222 47% 12%;
+    --ring: 262 83% 58%;
+
+    /* Gradients - Dark */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(222 47% 7%));
+    --gradient-glow: radial-gradient(circle, hsl(var(--primary) / 0.15), transparent 70%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+
+    /* Shadows - Dark */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    --shadow-accent: 0 0 30px hsl(var(--accent) / 0.4);
+
+    /* Sidebar - Dark */
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 224 71% 4%;
+    --sidebar-accent: 222 47% 11%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 222 47% 15%;
+    --sidebar-ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    background-image: var(--gradient-dark);
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+    &:hover {
+      @apply bg-muted-foreground;
+    }
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  .dark .glass-card {
+    @apply bg-card/40;
+  }
+
+  /* Glow Effect */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Button Variants */
+  .btn-glow {
+    @apply relative overflow-hidden rounded-xl;
+    background: var(--gradient-primary);
+    transition: var(--transition-smooth);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, hsl(var(--primary-glow) / 0.4), transparent);
+      transition: left 0.5s;
+    }
+    
+    &:hover::before {
+      left: 100%;
+    }
+    
+    &:hover {
+      box-shadow: var(--shadow-glow);
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Social Platform Badges */
+  .badge-instagram {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500;
+  }
+
+  .badge-tiktok {
+    @apply bg-black border border-white/20;
+  }
+
+  .badge-facebook {
+    @apply bg-blue-600;
+  }
+
+  .badge-linkedin {
+    @apply bg-blue-700;
+  }
+
+  .badge-whatsapp {
+    @apply bg-green-500;
+  }
+
+  .badge-telegram {
+    @apply bg-sky-500;
+  }
+
+  .badge-kwai {
+    @apply bg-orange-500;
+  }
+
+  /* Animations */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.3s ease-out;
+  }
+
+  /* Metric Card Hover */
+  .metric-card {
+    @apply glass-card p-6 transition-all duration-300 rounded-2xl;
+    
+    &:hover {
+      @apply border-primary/50;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px hsl(var(--primary) / 0.2);
+    }
+  }
+
+  /* Modern Card Styles */
+  .modern-card {
+    @apply bg-card border border-border rounded-2xl p-6 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Modern Input Styles */
+  .modern-input {
+    @apply rounded-xl border-border bg-background px-4 py-3;
+  }
+
+  /* Modern Button Base */
+  .modern-button {
+    @apply rounded-xl px-5 py-2.5 font-medium transition-all duration-200;
+  }
+}

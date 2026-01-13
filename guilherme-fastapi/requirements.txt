@@ -1,0 +1,10 @@
+fastapi[all]==0.95.2
+httpx==0.24.1
+uvicorn==0.22.0
+pydantic==1.10.11
+python-dotenv==1.0.0
+SQLAlchemy==1.4.52
+asyncpg==0.29.0
+alembic==1.11.1
+loguru==0.7.0
+tenacity==8.2.2

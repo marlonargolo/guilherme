@@ -1,0 +1,15 @@
+1️⃣ Instalar PM2
+npm install -g pm2
+
+2️⃣ Rodar o Vite com PM2
+pm2 start "npm run dev" --name meu-frontend
+
+3️⃣ Ver status
+pm2 status
+
+4️⃣ Ver logs
+pm2 logs meu-frontend
+
+5️⃣ Iniciar automaticamente no boot do servidor
+pm2 startup
+pm2 save

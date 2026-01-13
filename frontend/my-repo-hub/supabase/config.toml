@@ -1,0 +1,66 @@
+project_id = "asghimxxkrhkpfeutumb"
+
+[functions.generate-content]
+verify_jwt = false
+
+[functions."check-login-rate"]
+verify_jwt = false
+
+[functions."call-webhook"]
+verify_jwt = true
+
+[functions."process-incoming-message"]
+verify_jwt = false
+
+[functions."send-omnichannel-message"]
+verify_jwt = true
+
+[functions."create-checkout"]
+verify_jwt = true
+
+[functions."create-payment"]
+verify_jwt = true
+
+[functions."check-subscription"]
+verify_jwt = true
+
+[functions."customer-portal"]
+verify_jwt = true
+
+[functions."chat-ia"]
+verify_jwt = true
+
+[functions."voice-token"]
+verify_jwt = true
+
+[functions."generate-artwork"]
+verify_jwt = false
+
+[functions."generate-campaign-text"]
+verify_jwt = false
+
+[functions."use-tokens"]
+verify_jwt = true
+
+[functions."meta-webhook"]
+verify_jwt = false
+
+[functions."generate-comment-response"]
+verify_jwt = true
+
+[functions."manage-superadmin"]
+verify_jwt = true
+
+[functions."master-agent"]
+verify_jwt = true
+
+[functions."process-social-webhook"]
+verify_jwt = false
+
+[functions."send-dm-sequence"]
+verify_jwt = true
+
+[functions."send-retention"]
+verify_jwt = false
+
+
